@@ -8,16 +8,21 @@ class StackTest extends StatelessWidget {
     return Scaffold(
       body: Stack(
         alignment: Alignment.center,
+        clipBehavior: Clip.none,
         children: [
           Container(
             height: 300,
             width: 300,
             color: Colors.red,
           ),
-          Container(
-            height: 200,
-            width: 200,
-            color: Colors.green,
+          Positioned(
+            top: 0,
+            right: -100,
+            child: Container(
+              height: 200,
+              width: 200,
+              color: Colors.green,
+            ),
           ),
           Container(
             height: 100,
