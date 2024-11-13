@@ -3,6 +3,7 @@ import 'package:testing_flutter_project/widgets/appBar.dart';
 import 'package:testing_flutter_project/widgets/bodyContainer.dart';
 import 'package:testing_flutter_project/widgets/button.dart';
 import 'package:testing_flutter_project/widgets/card.dart';
+import 'package:testing_flutter_project/widgets/column.dart';
 import 'package:testing_flutter_project/widgets/imageTesting.dart';
 import 'package:testing_flutter_project/widgets/row.dart';
 
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: appBarWidget(),
-        body: RowTest(),
+        body: ColumnTest(),
       ),
     );
   }
