@@ -4,6 +4,7 @@ import 'package:testing_flutter_project/widgets/bodyContainer.dart';
 import 'package:testing_flutter_project/widgets/button.dart';
 import 'package:testing_flutter_project/widgets/card.dart';
 import 'package:testing_flutter_project/widgets/imageTesting.dart';
+import 'package:testing_flutter_project/widgets/row.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: appBarWidget(),
-        body: ButtonTesting(),
+        body: RowTest(),
       ),
     );
   }
