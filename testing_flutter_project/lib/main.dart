@@ -6,6 +6,7 @@ import 'package:testing_flutter_project/widgets/card.dart';
 import 'package:testing_flutter_project/widgets/column.dart';
 import 'package:testing_flutter_project/widgets/expanded&Flexible.dart';
 import 'package:testing_flutter_project/widgets/imageTesting.dart';
+import 'package:testing_flutter_project/widgets/profile_test.dart';
 import 'package:testing_flutter_project/widgets/row.dart';
 import 'package:testing_flutter_project/widgets/stack.dart';
 
@@ -22,8 +23,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        appBar: appBarWidget(),
-        body: ExpandedAndFlexible(),
+        body: ProfileTest(),
       ),
     );
   }
