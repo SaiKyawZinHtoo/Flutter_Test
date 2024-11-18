@@ -7,6 +7,7 @@ import 'package:testing_flutter_project/widgets/column.dart';
 import 'package:testing_flutter_project/widgets/divider.dart';
 import 'package:testing_flutter_project/widgets/expanded&Flexible.dart';
 import 'package:testing_flutter_project/widgets/gestureDector.dart';
+import 'package:testing_flutter_project/widgets/gridView.dart';
 import 'package:testing_flutter_project/widgets/imageTesting.dart';
 import 'package:testing_flutter_project/widgets/listTile.dart';
 import 'package:testing_flutter_project/widgets/listView.dart';
@@ -30,7 +31,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: appBarWidget(),
-        body: ListViewBuilderWidget(),
+        body: GridViewWidget(),
       ),
     );
   }
