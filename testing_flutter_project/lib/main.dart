@@ -6,6 +6,7 @@ import 'package:testing_flutter_project/widgets/card.dart';
 import 'package:testing_flutter_project/widgets/column.dart';
 import 'package:testing_flutter_project/widgets/divider.dart';
 import 'package:testing_flutter_project/widgets/expanded&Flexible.dart';
+import 'package:testing_flutter_project/widgets/gestureDector.dart';
 import 'package:testing_flutter_project/widgets/imageTesting.dart';
 import 'package:testing_flutter_project/widgets/profile_test.dart';
 import 'package:testing_flutter_project/widgets/row.dart';
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: appBarWidget(),
-        body: DividerWidget(),
+        body: GesturedectorWidget(),
       ),
     );
   }
