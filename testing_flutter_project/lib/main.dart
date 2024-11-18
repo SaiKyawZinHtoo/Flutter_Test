@@ -4,6 +4,7 @@ import 'package:testing_flutter_project/widgets/bodyContainer.dart';
 import 'package:testing_flutter_project/widgets/button.dart';
 import 'package:testing_flutter_project/widgets/card.dart';
 import 'package:testing_flutter_project/widgets/column.dart';
+import 'package:testing_flutter_project/widgets/divider.dart';
 import 'package:testing_flutter_project/widgets/expanded&Flexible.dart';
 import 'package:testing_flutter_project/widgets/imageTesting.dart';
 import 'package:testing_flutter_project/widgets/profile_test.dart';
@@ -23,7 +24,8 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        body: ProfileTest(),
+        appBar: appBarWidget(),
+        body: DividerWidget(),
       ),
     );
   }
