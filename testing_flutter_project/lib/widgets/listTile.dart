@@ -5,7 +5,7 @@ class ListtileWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: Center(
         child: ListTitleWidget(
           text1: "ShanLay",
@@ -29,14 +29,19 @@ class ListTitleWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      leading: const Icon(
-        Icons.account_circle,
-        size: 50,
-        color: Colors.green,
+      leading: const CircleAvatar(
+        backgroundColor: Colors.amber,
+        radius: 30,
+        child: Text("S", style: TextStyle(fontSize: 30, color: Colors.white)),
       ),
+      //const Icon(
+      //   Icons.account_circle,
+      //   size: 50,
+      //   color: Colors.green,
+      // ),
       title: Text(
         text1,
-        style: TextStyle(
+        style: const TextStyle(
           fontSize: 30,
           fontWeight: FontWeight.bold,
           color: Colors.blue,
@@ -44,7 +49,7 @@ class ListTitleWidget extends StatelessWidget {
       ),
       subtitle: Text(
         text2,
-        style: TextStyle(
+        style: const TextStyle(
           fontSize: 15,
           fontWeight: FontWeight.bold,
           color: Colors.red,
@@ -56,7 +61,7 @@ class ListTitleWidget extends StatelessWidget {
       contentPadding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(20),
-        side: BorderSide(
+        side: const BorderSide(
           color: Colors.black,
           width: 2,
         ),
