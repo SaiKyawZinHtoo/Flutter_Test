@@ -7,13 +7,13 @@ class ScreenC extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final argument = ModalRoute.of(context)?.settings.arguments as String;
+    // final argument = ModalRoute.of(context)?.settings.arguments as String;
     return Scaffold(
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text("Data from argument: $argument"),
+            Text("Data from argument  ---------------"),
             const Text("Screen C"),
             ElevatedButton.icon(
               icon: const Icon(Icons.arrow_back_ios),

@@ -34,11 +34,12 @@ class ScreenA extends StatelessWidget {
               onPressed: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(
-                      builder: (context) => const ScreenC(),
-                      settings: const RouteSettings(
-                        name: "Screen C",
-                        arguments: "data from Screen A",
-                      )),
+                    builder: (context) => const ScreenC(),
+                    settings: const RouteSettings(
+                      name: "Screen C",
+                      arguments: "data from Screen A",
+                    ),
+                  ),
                 );
               },
             ),

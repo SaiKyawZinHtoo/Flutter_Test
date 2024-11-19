@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:testing_flutter_project/navigation/screen_a.dart';
+import 'package:testing_flutter_project/navigation/screen_b.dart';
+import 'package:testing_flutter_project/navigation/screen_c.dart';
 import 'package:testing_flutter_project/widgets/appBar.dart';
 import 'package:testing_flutter_project/widgets/bodyContainer.dart';
 import 'package:testing_flutter_project/widgets/button.dart';
@@ -31,13 +33,39 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        appBar: appBarWidget(),
-        body: ScreenA(),
-      ),
+      home: const ScreenA(),
+      //initialRoute: "ScreenB",
+      onGenerateRoute: (settings) {
+        switch (settings.name) {
+          case 'ScreenA':
+            return MaterialPageRoute(
+              builder: (context) => const ScreenA(),
+            );
+          case 'ScreenB':
+            return MaterialPageRoute(
+                builder: (context) => ScreenB(
+                      data: settings.arguments as String,
+                    ));
+          case 'ScreenC':
+            return MaterialPageRoute(
+              builder: (context) => const ScreenC(),
+            );
+          default:
+            return MaterialPageRoute(
+              builder: (context) => const ScreenA(),
+            );
+        }
+      },
+      // routes: {
+      //   'ScreenA': (context) => const ScreenA(),
+      //   'ScreenB': (context) => const ScreenB(
+      //         data: 'data from Screen A',
+      //       ),
+      //   'ScreenC': (context) => const ScreenC(),
+      // },
     );
   }
 }

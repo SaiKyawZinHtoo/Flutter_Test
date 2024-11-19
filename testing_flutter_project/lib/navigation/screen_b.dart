@@ -34,6 +34,13 @@ class ScreenB extends StatelessWidget {
                 Navigator.of(context).pop("Data From Screen B");
               },
             ),
+            ElevatedButton.icon(
+              icon: const Icon(Icons.arrow_back_ios),
+              label: const Text("Go to Screen A with pushNamed"),
+              onPressed: () {
+                Navigator.of(context).pushNamed("ScreenA");
+              },
+            ),
           ],
         ),
       ),
