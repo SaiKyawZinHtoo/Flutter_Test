@@ -13,11 +13,11 @@ class GritTileWidget extends StatelessWidget {
         itemBuilder: (context, index) => GridTile(
           header: Text(
             "Header $index",
-            style: TextStyle(
+            style: const TextStyle(
                 color: Colors.white, fontWeight: FontWeight.bold, fontSize: 20),
           ),
           footer: Container(
-            padding: EdgeInsets.symmetric(horizontal: 70, vertical: 10),
+            padding: const EdgeInsets.symmetric(horizontal: 70, vertical: 10),
             child: Text("Footer $index"),
           ),
           child: ClipRRect(
