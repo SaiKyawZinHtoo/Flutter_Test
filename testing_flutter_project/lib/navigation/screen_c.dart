@@ -7,15 +7,17 @@ class ScreenC extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final argument = ModalRoute.of(context)?.settings.arguments as String;
     return Scaffold(
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            Text("Data from argument: $argument"),
             const Text("Screen C"),
             ElevatedButton.icon(
-              icon: Icon(Icons.arrow_back_ios),
-              label: Text("Go to Screen A"),
+              icon: const Icon(Icons.arrow_back_ios),
+              label: const Text("Go to Screen A"),
               onPressed: () {
                 Navigator.of(context).popUntil(
                   (route) => route.isFirst,
@@ -23,8 +25,8 @@ class ScreenC extends StatelessWidget {
               },
             ),
             ElevatedButton.icon(
-              icon: Icon(Icons.arrow_back_ios),
-              label: Text("Go to Screen B"),
+              icon: const Icon(Icons.arrow_back_ios),
+              label: const Text("Go to Screen B"),
               onPressed: () {
                 Navigator.of(context).pop();
               },

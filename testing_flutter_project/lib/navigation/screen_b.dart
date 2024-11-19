@@ -3,7 +3,9 @@ import 'package:testing_flutter_project/navigation/screen_a.dart';
 import 'package:testing_flutter_project/navigation/screen_c.dart';
 
 class ScreenB extends StatelessWidget {
-  const ScreenB({super.key});
+  const ScreenB({super.key, required this.data});
+
+  final String data;
 
   @override
   Widget build(BuildContext context) {
@@ -12,10 +14,11 @@ class ScreenB extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            Text("Data: $data"),
             const Text("Screen B"),
             ElevatedButton.icon(
-              icon: Icon(Icons.arrow_forward_ios),
-              label: Text("Go to Screen C"),
+              icon: const Icon(Icons.arrow_forward_ios),
+              label: const Text("Go to Screen C"),
               onPressed: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(
@@ -25,10 +28,10 @@ class ScreenB extends StatelessWidget {
               },
             ),
             ElevatedButton.icon(
-              icon: Icon(Icons.arrow_back_ios),
-              label: Text("Go to Screen A"),
+              icon: const Icon(Icons.arrow_back_ios),
+              label: const Text("Go to Screen A"),
               onPressed: () {
-                Navigator.of(context).pop();
+                Navigator.of(context).pop("Data From Screen B");
               },
             ),
           ],

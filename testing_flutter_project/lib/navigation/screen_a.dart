@@ -14,24 +14,31 @@ class ScreenA extends StatelessWidget {
           children: [
             const Text("Screen A"),
             ElevatedButton.icon(
-              icon: Icon(Icons.arrow_forward_ios),
-              label: Text("Go to Screen B"),
-              onPressed: () {
-                Navigator.of(context).push(
+              icon: const Icon(Icons.arrow_forward_ios),
+              label: const Text("Go to Screen B"),
+              onPressed: () async {
+                const dataFromScreenB = "data from Screen A";
+                final result = await Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (context) => const ScreenB(),
+                    builder: (context) => const ScreenB(
+                      data: dataFromScreenB,
+                    ),
                   ),
                 );
+                debugPrint(result);
               },
             ),
             ElevatedButton.icon(
-              icon: Icon(Icons.arrow_forward_ios),
-              label: Text("Go to Screen C"),
+              icon: const Icon(Icons.arrow_forward_ios),
+              label: const Text("Go to Screen C"),
               onPressed: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (context) => const ScreenC(),
-                  ),
+                      builder: (context) => const ScreenC(),
+                      settings: const RouteSettings(
+                        name: "Screen C",
+                        arguments: "data from Screen A",
+                      )),
                 );
               },
             ),
