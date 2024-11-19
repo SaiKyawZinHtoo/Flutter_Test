@@ -18,6 +18,7 @@ import 'package:testing_flutter_project/widgets/profile_test.dart';
 import 'package:testing_flutter_project/widgets/row.dart';
 import 'package:testing_flutter_project/widgets/singleChildSchoolView.dart';
 import 'package:testing_flutter_project/widgets/stack.dart';
+import 'package:testing_flutter_project/widgets/wrap.dart';
 
 void main() {
   runApp(const MyApp());
@@ -33,7 +34,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: appBarWidget(),
-        body: GridTileBarWidget(),
+        body: WrapWidget(),
       ),
     );
   }

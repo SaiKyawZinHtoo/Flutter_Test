@@ -8,7 +8,7 @@ class GridTileBarWidget extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: GridTile(
-          header: GridTileBar(
+          header: const GridTileBar(
             leading: CircleAvatar(
               child: Text("S"),
             ),
@@ -17,10 +17,10 @@ class GridTileBarWidget extends StatelessWidget {
             subtitle: Text("0912345678"),
             backgroundColor: Colors.amber,
           ),
-          footer: GridTileBar(
+          footer: const GridTileBar(
             backgroundColor: Colors.amber,
             title: Row(
-              children: const [
+              children: [
                 Icon(Icons.heart_broken),
                 Text(
                   "Like",
