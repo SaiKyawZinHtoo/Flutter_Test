@@ -21,6 +21,7 @@ import 'package:testing_flutter_project/widgets/listTile.dart';
 import 'package:testing_flutter_project/widgets/listView.dart';
 import 'package:testing_flutter_project/widgets/listViewBuilder.dart';
 import 'package:testing_flutter_project/widgets/navigationBar.dart';
+import 'package:testing_flutter_project/widgets/navigationRail.dart';
 import 'package:testing_flutter_project/widgets/profile_test.dart';
 import 'package:testing_flutter_project/widgets/row.dart';
 import 'package:testing_flutter_project/widgets/singleChildSchoolView.dart';
@@ -43,7 +44,7 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         appBar: appBarWidget(),
         //body: FloatingButtonWidget(),
-        bottomNavigationBar: NavigationBarWidget(),
+        bottomNavigationBar: NavigationRailWidget(),
       ),
     );
   }
