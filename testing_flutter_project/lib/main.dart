@@ -10,6 +10,7 @@ import 'package:testing_flutter_project/widgets/button.dart';
 import 'package:testing_flutter_project/widgets/card.dart';
 import 'package:testing_flutter_project/widgets/column.dart';
 import 'package:testing_flutter_project/widgets/divider.dart';
+import 'package:testing_flutter_project/widgets/drawer.dart';
 import 'package:testing_flutter_project/widgets/expanded&Flexible.dart';
 import 'package:testing_flutter_project/widgets/floatingButton.dart';
 import 'package:testing_flutter_project/widgets/gestureDector.dart';
@@ -42,9 +43,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: "Flutter Demo",
       home: Scaffold(
-        appBar: appBarWidget(),
-        //body: FloatingButtonWidget(),
-        bottomNavigationBar: NavigationRailWidget(),
+        //appBar: appBarWidget(),
+        body: DrawerWidget(),
+        //bottomNavigationBar: NavigationRailWidget(),
       ),
     );
   }
