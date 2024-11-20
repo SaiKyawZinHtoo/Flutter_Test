@@ -26,6 +26,8 @@ class _BottomNavBarState extends State<BottomNavBar> {
       //appBar: appBarWidget(),
       body: pages[currentIndex],
       bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
+        elevation: 10,
         currentIndex: currentIndex,
         onTap: (index) {
           setState(() {
