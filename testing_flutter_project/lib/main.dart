@@ -10,6 +10,7 @@ import 'package:testing_flutter_project/widgets/card.dart';
 import 'package:testing_flutter_project/widgets/column.dart';
 import 'package:testing_flutter_project/widgets/divider.dart';
 import 'package:testing_flutter_project/widgets/expanded&Flexible.dart';
+import 'package:testing_flutter_project/widgets/floatingButton.dart';
 import 'package:testing_flutter_project/widgets/gestureDector.dart';
 import 'package:testing_flutter_project/widgets/gridTile.dart';
 import 'package:testing_flutter_project/widgets/gridTileBar.dart';
@@ -39,7 +40,7 @@ class MyApp extends StatelessWidget {
       title: "Flutter Demo",
       home: Scaffold(
         appBar: appBarWidget(),
-        body: BuildContextWidget(),
+        body: FloatingButtonWidget(),
       ),
     );
   }
