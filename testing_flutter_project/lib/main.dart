@@ -28,6 +28,7 @@ import 'package:testing_flutter_project/widgets/navigationBar.dart';
 import 'package:testing_flutter_project/widgets/navigationRail.dart';
 import 'package:testing_flutter_project/widgets/popupMenu.dart';
 import 'package:testing_flutter_project/widgets/profile_test.dart';
+import 'package:testing_flutter_project/widgets/radio.dart';
 import 'package:testing_flutter_project/widgets/row.dart';
 import 'package:testing_flutter_project/widgets/singleChildSchoolView.dart';
 import 'package:testing_flutter_project/widgets/slide.dart';
@@ -51,7 +52,7 @@ class MyApp extends StatelessWidget {
       title: "Flutter Demo",
       home: Scaffold(
         appBar: appBarWidget(),
-        body: TestTextFormField(),
+        body: TestRadio(),
         // bottomNavigationBar: IndexedStackWidget(),
       ),
     );
