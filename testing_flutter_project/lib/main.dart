@@ -30,6 +30,7 @@ import 'package:testing_flutter_project/widgets/popupMenu.dart';
 import 'package:testing_flutter_project/widgets/profile_test.dart';
 import 'package:testing_flutter_project/widgets/row.dart';
 import 'package:testing_flutter_project/widgets/singleChildSchoolView.dart';
+import 'package:testing_flutter_project/widgets/slide.dart';
 import 'package:testing_flutter_project/widgets/stack.dart';
 import 'package:testing_flutter_project/widgets/statefulwidget.dart';
 import 'package:testing_flutter_project/widgets/wrap.dart';
@@ -48,7 +49,7 @@ class MyApp extends StatelessWidget {
       title: "Flutter Demo",
       home: Scaffold(
         appBar: appBarWidget(),
-        body: TestLinearProgressIndicator(),
+        body: TestSlide(),
         // bottomNavigationBar: IndexedStackWidget(),
       ),
     );
