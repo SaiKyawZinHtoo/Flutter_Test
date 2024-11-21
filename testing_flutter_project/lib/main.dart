@@ -11,6 +11,7 @@ import 'package:testing_flutter_project/widgets/card.dart';
 import 'package:testing_flutter_project/widgets/checkedBox.dart';
 import 'package:testing_flutter_project/widgets/circularProgressIndicator.dart';
 import 'package:testing_flutter_project/widgets/column.dart';
+import 'package:testing_flutter_project/widgets/dialog.dart';
 import 'package:testing_flutter_project/widgets/divider.dart';
 import 'package:testing_flutter_project/widgets/drawer.dart';
 import 'package:testing_flutter_project/widgets/expanded&Flexible.dart';
@@ -54,7 +55,7 @@ class MyApp extends StatelessWidget {
       title: "Flutter Demo",
       home: Scaffold(
         appBar: appBarWidget(),
-        body: TestSwitch(),
+        body: TestDialog(),
         // bottomNavigationBar: IndexedStackWidget(),
       ),
     );
