@@ -8,6 +8,7 @@ import 'package:testing_flutter_project/widgets/bottom_nav.dart';
 import 'package:testing_flutter_project/widgets/buildContext.dart';
 import 'package:testing_flutter_project/widgets/button.dart';
 import 'package:testing_flutter_project/widgets/card.dart';
+import 'package:testing_flutter_project/widgets/checkedBox.dart';
 import 'package:testing_flutter_project/widgets/circularProgressIndicator.dart';
 import 'package:testing_flutter_project/widgets/column.dart';
 import 'package:testing_flutter_project/widgets/divider.dart';
@@ -52,7 +53,7 @@ class MyApp extends StatelessWidget {
       title: "Flutter Demo",
       home: Scaffold(
         appBar: appBarWidget(),
-        body: TestRadio(),
+        body: TestCheckedBox(),
         // bottomNavigationBar: IndexedStackWidget(),
       ),
     );
