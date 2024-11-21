@@ -18,6 +18,7 @@ import 'package:testing_flutter_project/widgets/gridTile.dart';
 import 'package:testing_flutter_project/widgets/gridTileBar.dart';
 import 'package:testing_flutter_project/widgets/gridView.dart';
 import 'package:testing_flutter_project/widgets/imageTesting.dart';
+import 'package:testing_flutter_project/widgets/indexedStack.dart';
 import 'package:testing_flutter_project/widgets/listTile.dart';
 import 'package:testing_flutter_project/widgets/listView.dart';
 import 'package:testing_flutter_project/widgets/listViewBuilder.dart';
@@ -44,8 +45,8 @@ class MyApp extends StatelessWidget {
       title: "Flutter Demo",
       home: Scaffold(
         //appBar: appBarWidget(),
-        body: DrawerWidget(),
-        //bottomNavigationBar: NavigationRailWidget(),
+        //body: DrawerWidget(),
+        bottomNavigationBar: IndexedStackWidget(),
       ),
     );
   }
