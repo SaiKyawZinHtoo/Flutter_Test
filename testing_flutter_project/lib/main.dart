@@ -35,6 +35,7 @@ import 'package:testing_flutter_project/widgets/singleChildSchoolView.dart';
 import 'package:testing_flutter_project/widgets/slide.dart';
 import 'package:testing_flutter_project/widgets/stack.dart';
 import 'package:testing_flutter_project/widgets/statefulwidget.dart';
+import 'package:testing_flutter_project/widgets/switch.dart';
 import 'package:testing_flutter_project/widgets/textField.dart';
 import 'package:testing_flutter_project/widgets/textFromField.dart';
 import 'package:testing_flutter_project/widgets/wrap.dart';
@@ -53,7 +54,7 @@ class MyApp extends StatelessWidget {
       title: "Flutter Demo",
       home: Scaffold(
         appBar: appBarWidget(),
-        body: TestCheckedBox(),
+        body: TestSwitch(),
         // bottomNavigationBar: IndexedStackWidget(),
       ),
     );
