@@ -79,7 +79,7 @@ class _TestTextFieldState extends State<TestTextField> {
                   controller.clear();
                   print("Email: ${controller.text}");
                 },
-                child: Text(
+                child: const Text(
                   "Submit",
                 ),
               ),
