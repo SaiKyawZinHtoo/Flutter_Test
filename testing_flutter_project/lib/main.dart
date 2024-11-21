@@ -39,6 +39,7 @@ import 'package:testing_flutter_project/widgets/snackBar.dart';
 import 'package:testing_flutter_project/widgets/stack.dart';
 import 'package:testing_flutter_project/widgets/statefulwidget.dart';
 import 'package:testing_flutter_project/widgets/switch.dart';
+import 'package:testing_flutter_project/widgets/tabBar.dart';
 import 'package:testing_flutter_project/widgets/textField.dart';
 import 'package:testing_flutter_project/widgets/textFromField.dart';
 import 'package:testing_flutter_project/widgets/wrap.dart';
@@ -56,8 +57,11 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: "Flutter Demo",
       home: Scaffold(
-        appBar: appBarWidget(),
-        body: TestSnackBar(),
+        appBar: PreferredSize(
+          preferredSize: Size.fromHeight(100),
+          child: TestTabBar(),
+        ),
+        //body: TestSnackBar(),
         // bottomNavigationBar: IndexedStackWidget(),
       ),
     );
