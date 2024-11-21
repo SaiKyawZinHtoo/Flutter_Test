@@ -4,6 +4,7 @@ import 'package:testing_flutter_project/navigation/screen_b.dart';
 import 'package:testing_flutter_project/navigation/screen_c.dart';
 import 'package:testing_flutter_project/widgets/appBar.dart';
 import 'package:testing_flutter_project/widgets/bodyContainer.dart';
+import 'package:testing_flutter_project/widgets/bottomSheet.dart';
 import 'package:testing_flutter_project/widgets/bottom_nav.dart';
 import 'package:testing_flutter_project/widgets/buildContext.dart';
 import 'package:testing_flutter_project/widgets/button.dart';
@@ -55,7 +56,7 @@ class MyApp extends StatelessWidget {
       title: "Flutter Demo",
       home: Scaffold(
         appBar: appBarWidget(),
-        body: TestDialog(),
+        body: TestBottomSheet(),
         // bottomNavigationBar: IndexedStackWidget(),
       ),
     );
