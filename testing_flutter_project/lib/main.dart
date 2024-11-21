@@ -29,6 +29,7 @@ import 'package:testing_flutter_project/widgets/listView.dart';
 import 'package:testing_flutter_project/widgets/listViewBuilder.dart';
 import 'package:testing_flutter_project/widgets/navigationBar.dart';
 import 'package:testing_flutter_project/widgets/navigationRail.dart';
+import 'package:testing_flutter_project/widgets/pageView.dart';
 import 'package:testing_flutter_project/widgets/popupMenu.dart';
 import 'package:testing_flutter_project/widgets/profile_test.dart';
 import 'package:testing_flutter_project/widgets/radio.dart';
@@ -57,12 +58,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: "Flutter Demo",
       home: Scaffold(
-        appBar: PreferredSize(
-          preferredSize: Size.fromHeight(100),
-          child: TestTabBar(),
-        ),
-        //body: TestSnackBar(),
-        // bottomNavigationBar: IndexedStackWidget(),
+        appBar: appBarWidget(),
+        body: TestPageView(),
       ),
     );
   }
