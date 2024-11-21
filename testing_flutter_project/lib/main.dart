@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:testing_flutter_project/login_and_signUp/signIn.dart';
 import 'package:testing_flutter_project/navigation/screen_a.dart';
 import 'package:testing_flutter_project/navigation/screen_b.dart';
 import 'package:testing_flutter_project/navigation/screen_c.dart';
@@ -58,8 +59,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: "Flutter Demo",
       home: Scaffold(
-        appBar: appBarWidget(),
-        body: TestPageView(),
+        //appBar: appBarWidget(),
+        body: SignIn(),
       ),
     );
   }
