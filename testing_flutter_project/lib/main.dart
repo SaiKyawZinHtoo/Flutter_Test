@@ -35,6 +35,7 @@ import 'package:testing_flutter_project/widgets/radio.dart';
 import 'package:testing_flutter_project/widgets/row.dart';
 import 'package:testing_flutter_project/widgets/singleChildSchoolView.dart';
 import 'package:testing_flutter_project/widgets/slide.dart';
+import 'package:testing_flutter_project/widgets/snackBar.dart';
 import 'package:testing_flutter_project/widgets/stack.dart';
 import 'package:testing_flutter_project/widgets/statefulwidget.dart';
 import 'package:testing_flutter_project/widgets/switch.dart';
@@ -56,7 +57,7 @@ class MyApp extends StatelessWidget {
       title: "Flutter Demo",
       home: Scaffold(
         appBar: appBarWidget(),
-        body: TestBottomSheet(),
+        body: TestSnackBar(),
         // bottomNavigationBar: IndexedStackWidget(),
       ),
     );

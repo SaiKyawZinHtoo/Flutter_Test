@@ -15,7 +15,7 @@ class TestBottomSheet extends StatelessWidget {
                 padding: const EdgeInsets.all(20),
                 height: 300,
                 width: double.infinity,
-                child: Text("Shan Lay"),
+                child: const Text("Shan Lay"),
               ),
             );
           },
