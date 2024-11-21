@@ -8,6 +8,7 @@ import 'package:testing_flutter_project/widgets/bottom_nav.dart';
 import 'package:testing_flutter_project/widgets/buildContext.dart';
 import 'package:testing_flutter_project/widgets/button.dart';
 import 'package:testing_flutter_project/widgets/card.dart';
+import 'package:testing_flutter_project/widgets/circularProgressIndicator.dart';
 import 'package:testing_flutter_project/widgets/column.dart';
 import 'package:testing_flutter_project/widgets/divider.dart';
 import 'package:testing_flutter_project/widgets/drawer.dart';
@@ -45,11 +46,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: "Flutter Demo",
       home: Scaffold(
-        appBar: PreferredSize(
-          preferredSize: Size.fromHeight(50),
-          child: TestPopupMenu(),
-        ),
-        // body: DrawerWidget(),
+        appBar: appBarWidget(),
+        body: TestCircularProgressIndicator(),
         // bottomNavigationBar: IndexedStackWidget(),
       ),
     );
