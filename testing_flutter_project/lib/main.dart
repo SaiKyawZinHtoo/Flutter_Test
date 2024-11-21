@@ -24,6 +24,7 @@ import 'package:testing_flutter_project/widgets/listView.dart';
 import 'package:testing_flutter_project/widgets/listViewBuilder.dart';
 import 'package:testing_flutter_project/widgets/navigationBar.dart';
 import 'package:testing_flutter_project/widgets/navigationRail.dart';
+import 'package:testing_flutter_project/widgets/popupMenu.dart';
 import 'package:testing_flutter_project/widgets/profile_test.dart';
 import 'package:testing_flutter_project/widgets/row.dart';
 import 'package:testing_flutter_project/widgets/singleChildSchoolView.dart';
@@ -40,13 +41,16 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "Flutter Demo",
       home: Scaffold(
-        //appBar: appBarWidget(),
-        //body: DrawerWidget(),
-        bottomNavigationBar: IndexedStackWidget(),
+        appBar: PreferredSize(
+          preferredSize: Size.fromHeight(50),
+          child: TestPopupMenu(),
+        ),
+        // body: DrawerWidget(),
+        // bottomNavigationBar: IndexedStackWidget(),
       ),
     );
   }
