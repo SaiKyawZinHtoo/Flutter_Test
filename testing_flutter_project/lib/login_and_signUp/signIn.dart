@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:testing_flutter_project/login_and_signUp/signUp.dart';
 
-class SignIn extends StatelessWidget {
+class SignIn extends StatefulWidget {
   const SignIn({super.key});
 
+  @override
+  State<SignIn> createState() => _SignInState();
+}
+
+class _SignInState extends State<SignIn> {
+  bool isPasswordVisible = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,7 +49,7 @@ class SignIn extends StatelessWidget {
             ),
           ),
           Positioned.fill(
-            top: 200, // Positioned from the top
+            top: 250, // Positioned from the top
             child: SingleChildScrollView(
               child: Center(
                 child: Container(
@@ -73,25 +80,84 @@ class SignIn extends StatelessWidget {
                         ),
                       ),
                       const SizedBox(height: 20),
-                      const TextField(
-                        decoration: InputDecoration(
-                          border: OutlineInputBorder(),
-                          labelText: "Email",
-                          prefixIcon: Icon(Icons.email_outlined),
+                      const DecoratedBox(
+                        decoration: BoxDecoration(
+                          boxShadow: [
+                            BoxShadow(
+                              blurRadius: 10,
+                              color: Colors.black12,
+                              offset: Offset(0, 2),
+                              blurStyle: BlurStyle.outer,
+                            )
+                          ],
+                        ),
+                        child: TextField(
+                          keyboardType: TextInputType.emailAddress,
+                          decoration: InputDecoration(
+                            contentPadding: EdgeInsets.all(0),
+                            border: InputBorder.none,
+                            hintText: "Email",
+                            hintStyle: TextStyle(
+                              fontSize: 16,
+                              textBaseline: TextBaseline
+                                  .alphabetic, // Keeps text alignment consistent
+                            ),
+                            prefixIcon: Icon(
+                              Icons.email_outlined,
+                            ),
+                            prefixIconConstraints: BoxConstraints(
+                              minWidth: 70,
+                              // Adjust minimum width for proper alignment
+                            ),
+                          ),
                         ),
                       ),
                       const SizedBox(height: 20),
-                      const TextField(
-                        decoration: InputDecoration(
-                          border: OutlineInputBorder(),
-                          labelText: "Password",
-                          prefixIcon: Icon(Icons.lock),
+                      DecoratedBox(
+                        decoration: const BoxDecoration(boxShadow: [
+                          BoxShadow(
+                              blurRadius: 10,
+                              color: Colors.black12,
+                              offset: Offset(0, 2),
+                              blurStyle: BlurStyle.outer)
+                        ]),
+                        child: TextField(
+                          keyboardType: TextInputType.visiblePassword,
+                          obscureText: !isPasswordVisible,
+                          decoration: InputDecoration(
+                            contentPadding: const EdgeInsets.only(top: 13),
+                            border: InputBorder.none,
+                            hintText: "Password",
+                            hintStyle: const TextStyle(
+                              fontSize: 16,
+                              textBaseline: TextBaseline
+                                  .alphabetic, // Keeps text alignment consistent
+                            ),
+                            prefixIcon: const Icon(Icons.lock),
+                            suffixIcon: IconButton(
+                                onPressed: () {
+                                  setState(() {
+                                    isPasswordVisible = !isPasswordVisible;
+                                  });
+                                },
+                                icon: Icon(
+                                  isPasswordVisible
+                                      ? Icons.visibility
+                                      : Icons.visibility_off,
+                                )),
+                            prefixIconConstraints: const BoxConstraints(
+                              minWidth:
+                                  70, // Adjust minimum width for proper alignment
+                            ),
+                          ),
                         ),
                       ),
                       const SizedBox(height: 20),
                       ElevatedButton(
                         style: ElevatedButton.styleFrom(
+                          shape: const RoundedRectangleBorder(),
                           backgroundColor: Colors.indigo,
+                          elevation: 10,
                         ),
                         onPressed: () {},
                         child: const Text(
@@ -102,6 +168,41 @@ class SignIn extends StatelessWidget {
                         ),
                       ),
                       const SizedBox(height: 20),
+                      const Text(
+                        "Forget Password?",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontSize: 13,
+                          color: Colors.grey,
+                        ),
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          const Text(
+                            "Don't have an account?",
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              fontSize: 13,
+                              color: Colors.grey,
+                            ),
+                          ),
+                          TextButton(
+                            onPressed: () {
+                              Navigator.of(context).pushReplacement(
+                                MaterialPageRoute(
+                                  builder: (_) => const SignUp(),
+                                ),
+                              );
+                            },
+                            child: const Text(
+                              "SIGN UP",
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold, fontSize: 15),
+                            ),
+                          ),
+                        ],
+                      ),
                     ],
                   ),
                 ),
