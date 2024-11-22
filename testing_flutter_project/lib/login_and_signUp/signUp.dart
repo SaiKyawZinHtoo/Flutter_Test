@@ -49,7 +49,7 @@ class _SignInState extends State<SignUp> {
             ),
           ),
           Positioned.fill(
-            top: 250, // Positioned from the top
+            top: 230, // Positioned from the top
             child: SingleChildScrollView(
               child: Center(
                 child: Container(
