@@ -158,7 +158,7 @@ class _SignInState extends State<SignUp> {
                           ],
                         ),
                         child: TextField(
-                          keyboardType: TextInputType.emailAddress,
+                          keyboardType: TextInputType.phone,
                           decoration: InputDecoration(
                             contentPadding: EdgeInsets.all(0),
                             border: InputBorder.none,

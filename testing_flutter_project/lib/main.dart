@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:testing_flutter_project/login_and_signUp/signIn.dart';
+import 'package:testing_flutter_project/movie_UI/pages/movie_UI_page.dart';
 import 'package:testing_flutter_project/navigation/screen_a.dart';
 import 'package:testing_flutter_project/navigation/screen_b.dart';
 import 'package:testing_flutter_project/navigation/screen_c.dart';
@@ -60,7 +61,7 @@ class MyApp extends StatelessWidget {
       title: "Flutter Demo",
       home: Scaffold(
         //appBar: appBarWidget(),
-        body: SignIn(),
+        body: LoginPage(),
       ),
     );
   }
