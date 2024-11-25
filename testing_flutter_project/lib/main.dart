@@ -21,6 +21,7 @@ import 'package:testing_flutter_project/widgets/divider.dart';
 import 'package:testing_flutter_project/widgets/drawer.dart';
 import 'package:testing_flutter_project/widgets/expanded&Flexible.dart';
 import 'package:testing_flutter_project/widgets/floatingButton.dart';
+import 'package:testing_flutter_project/widgets/future_builder.dart';
 import 'package:testing_flutter_project/widgets/gestureDector.dart';
 import 'package:testing_flutter_project/widgets/gridTile.dart';
 import 'package:testing_flutter_project/widgets/gridTileBar.dart';
@@ -64,7 +65,7 @@ class MyApp extends StatelessWidget {
       title: "Flutter Demo",
       home: Scaffold(
         //appBar: appBarWidget(),
-        body: TestDateRangePicker(),
+        body: TestFutureBuilder(),
       ),
     );
   }
