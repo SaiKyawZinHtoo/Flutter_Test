@@ -44,6 +44,7 @@ import 'package:testing_flutter_project/widgets/slide.dart';
 import 'package:testing_flutter_project/widgets/snackBar.dart';
 import 'package:testing_flutter_project/widgets/stack.dart';
 import 'package:testing_flutter_project/widgets/statefulwidget.dart';
+import 'package:testing_flutter_project/widgets/stram_builder.dart';
 import 'package:testing_flutter_project/widgets/switch.dart';
 import 'package:testing_flutter_project/widgets/tabBar.dart';
 import 'package:testing_flutter_project/widgets/textField.dart';
@@ -65,7 +66,7 @@ class MyApp extends StatelessWidget {
       title: "Flutter Demo",
       home: Scaffold(
         //appBar: appBarWidget(),
-        body: TestFutureBuilder(),
+        body: TestStreamBuilder(),
       ),
     );
   }

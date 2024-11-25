@@ -45,9 +45,9 @@ class _TestFutureBuilderState extends State<TestFutureBuilder> {
                   switch (snapshot.connectionState) {
                     case ConnectionState.none:
                     case ConnectionState.waiting:
-                      return Column(
+                      return const Column(
                         mainAxisSize: MainAxisSize.min,
-                        children: const [
+                        children: [
                           CircularProgressIndicator(),
                           SizedBox(height: 16),
                           Text("Loading data, please wait..."),
@@ -60,7 +60,7 @@ class _TestFutureBuilderState extends State<TestFutureBuilder> {
                         return Column(
                           mainAxisSize: MainAxisSize.min,
                           children: [
-                            Icon(Icons.error_outline,
+                            const Icon(Icons.error_outline,
                                 color: Colors.red, size: 48),
                             const SizedBox(height: 16),
                             Text(
@@ -74,7 +74,7 @@ class _TestFutureBuilderState extends State<TestFutureBuilder> {
                       return Column(
                         mainAxisSize: MainAxisSize.min,
                         children: [
-                          Icon(Icons.check_circle_outline,
+                          const Icon(Icons.check_circle_outline,
                               color: Colors.green, size: 48),
                           const SizedBox(height: 16),
                           Text(
