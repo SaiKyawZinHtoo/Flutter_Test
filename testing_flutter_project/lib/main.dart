@@ -46,6 +46,7 @@ import 'package:testing_flutter_project/widgets/switch.dart';
 import 'package:testing_flutter_project/widgets/tabBar.dart';
 import 'package:testing_flutter_project/widgets/textField.dart';
 import 'package:testing_flutter_project/widgets/textFromField.dart';
+import 'package:testing_flutter_project/widgets/time_picker.dart';
 import 'package:testing_flutter_project/widgets/wrap.dart';
 
 void main() {
@@ -62,7 +63,7 @@ class MyApp extends StatelessWidget {
       title: "Flutter Demo",
       home: Scaffold(
         //appBar: appBarWidget(),
-        body: TestDatePicker(),
+        body: TestTimePicker(),
       ),
     );
   }
