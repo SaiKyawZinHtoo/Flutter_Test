@@ -42,10 +42,10 @@ class BodyWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
+    return const Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
-        children: const [
+        children: [
           NoNeedNumberWidget(),
           SizedBox(height: 20),
           NeedNumberWidget(),

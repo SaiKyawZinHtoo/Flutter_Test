@@ -5,6 +5,7 @@ import 'package:testing_flutter_project/movie_UI/pages/movie_UI_page.dart';
 import 'package:testing_flutter_project/navigation/screen_a.dart';
 import 'package:testing_flutter_project/navigation/screen_b.dart';
 import 'package:testing_flutter_project/navigation/screen_c.dart';
+import 'package:testing_flutter_project/note_app/pages/note_list_screen.dart';
 import 'package:testing_flutter_project/widgets/appBar.dart';
 import 'package:testing_flutter_project/widgets/bodyContainer.dart';
 import 'package:testing_flutter_project/widgets/bottomSheet.dart';
@@ -62,13 +63,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: "Flutter Demo",
-      home: Scaffold(
-        //appBar: appBarWidget(),
-        body: TestInherited(),
-      ),
+      title: "Note App",
+      home: NoteListScreen(),
+      theme: ThemeData.dark(),
     );
   }
 }
