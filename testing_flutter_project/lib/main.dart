@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:testing_flutter_project/inherited_widget/inherited_widget.dart';
 import 'package:testing_flutter_project/login_and_signUp/signIn.dart';
 import 'package:testing_flutter_project/movie_UI/pages/movie_UI_page.dart';
 import 'package:testing_flutter_project/navigation/screen_a.dart';
@@ -66,7 +67,7 @@ class MyApp extends StatelessWidget {
       title: "Flutter Demo",
       home: Scaffold(
         //appBar: appBarWidget(),
-        body: TestStreamBuilder(),
+        body: TestInherited(),
       ),
     );
   }
