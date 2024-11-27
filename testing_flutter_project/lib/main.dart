@@ -5,7 +5,8 @@ import 'package:testing_flutter_project/movie_UI/pages/movie_UI_page.dart';
 import 'package:testing_flutter_project/navigation/screen_a.dart';
 import 'package:testing_flutter_project/navigation/screen_b.dart';
 import 'package:testing_flutter_project/navigation/screen_c.dart';
-import 'package:testing_flutter_project/note_app/pages/note_list_screen.dart';
+import 'package:testing_flutter_project/note_app/note_list_screen.dart';
+import 'package:testing_flutter_project/note_app/pages/model/note.dart';
 import 'package:testing_flutter_project/widgets/appBar.dart';
 import 'package:testing_flutter_project/widgets/bodyContainer.dart';
 import 'package:testing_flutter_project/widgets/bottomSheet.dart';
@@ -57,6 +58,8 @@ import 'package:testing_flutter_project/widgets/wrap.dart';
 void main() {
   runApp(const MyApp());
 }
+
+final List<Note> allNote = [];
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});

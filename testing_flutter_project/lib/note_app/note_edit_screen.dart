@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:testing_flutter_project/main.dart';
+import 'package:testing_flutter_project/note_app/note_list_screen.dart';
 import 'package:testing_flutter_project/note_app/pages/model/note.dart';
 import 'package:uuid/uuid.dart';
 
@@ -58,6 +60,8 @@ class _NoteEditScreenState extends State<NoteEditScreen> {
         create: DateTime.now(),
         color: currentColor.value,
       );
+      final index = allNote.indexWhere((element) => element.id == note.id);
+      allNote[index] = note;
     } else {
       note = Note(
         id: const Uuid().v4(),
@@ -66,9 +70,14 @@ class _NoteEditScreenState extends State<NoteEditScreen> {
         create: DateTime.now(),
         color: currentColor.value,
       );
+      allNote.add(note);
     }
 
-    Navigator.of(context).pop(note);
+    Navigator.of(context).pushAndRemoveUntil(
+        MaterialPageRoute(
+          builder: (_) => const NoteListScreen(),
+        ),
+        (route) => false);
   }
 
   @override
@@ -150,7 +159,7 @@ class _NoteEditScreenState extends State<NoteEditScreen> {
                 decoration: BoxDecoration(
                   color: color,
                   shape: BoxShape.circle,
-                  border: currentColor == color
+                  border: currentColor.value == color.value
                       ? Border.all(color: Colors.white, width: 2)
                       : null,
                 ),

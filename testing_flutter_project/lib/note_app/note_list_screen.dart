@@ -1,18 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:intl/intl.dart';
+import 'package:testing_flutter_project/main.dart';
+import 'package:testing_flutter_project/note_app/note_edit_screen.dart';
+import 'package:testing_flutter_project/note_app/note_list_search.dart';
 import 'package:testing_flutter_project/note_app/pages/model/note.dart';
-import 'package:testing_flutter_project/note_app/pages/note_edit_screen.dart';
 
-class NoteListScreen extends StatefulWidget {
+class NoteListScreen extends StatelessWidget {
   const NoteListScreen({super.key});
-
-  @override
-  State<NoteListScreen> createState() => _NoteListScreenState();
-}
-
-class _NoteListScreenState extends State<NoteListScreen> {
-  final List<Note> _notes = [];
 
   @override
   Widget build(BuildContext context) {
@@ -28,29 +23,30 @@ class _NoteListScreenState extends State<NoteListScreen> {
         ),
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (_) => const NoteListSearch(),
+                ),
+              );
+            },
             icon: const Icon(Icons.search),
             tooltip: "Search Notes",
           ),
         ],
       ),
       floatingActionButton: FloatingActionButton.extended(
-        onPressed: () async {
-          final Note? result = await Navigator.of(context).push(
+        onPressed: () {
+          Navigator.of(context).push(
             MaterialPageRoute(
               builder: (_) => const NoteEditScreen(),
             ),
           );
-          if (result != null) {
-            setState(() {
-              _notes.add(result);
-            });
-          }
         },
         label: const Text("Add Note"),
         icon: const Icon(Icons.add),
       ),
-      body: _notes.isEmpty
+      body: allNote.isEmpty
           ? Center(
               child: Column(
                 mainAxisSize: MainAxisSize.min,
@@ -93,23 +89,17 @@ class _NoteListScreenState extends State<NoteListScreen> {
                 ],
               ),
               childrenDelegate: SliverChildBuilderDelegate(
-                childCount: _notes.length,
+                childCount: allNote.length,
                 (context, index) => NoteCard(
-                  note: _notes[index],
-                  onTap: () async {
-                    final Note? result = await Navigator.of(context).push(
+                  note: allNote[index],
+                  onTap: () {
+                    Navigator.of(context).push(
                       MaterialPageRoute(
                         builder: (_) => NoteEditScreen(
-                          note: _notes[index],
+                          note: allNote[index],
                         ),
                       ),
                     );
-                    if (result != null) {
-                      setState(() {
-                        _notes.indexWhere((element) => element.id == result.id);
-                        _notes[index] = result;
-                      });
-                    }
                   },
                 ),
               ),
@@ -132,7 +122,7 @@ class NoteCard extends StatelessWidget {
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(12),
           color: Color(note.color),
-          boxShadow: [
+          boxShadow: const [
             BoxShadow(
               color: Colors.black12,
               blurRadius: 4,
