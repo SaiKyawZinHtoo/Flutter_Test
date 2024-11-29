@@ -34,16 +34,17 @@ class _NoteListSearchState extends State<NoteListSearch> {
       appBar: AppBar(
         title: Row(
           children: [
-            const Icon(Icons.search, color: Colors.white),
+            Icon(
+              Icons.search,
+              color: Theme.of(context).iconTheme.color,
+            ),
             const SizedBox(width: 10),
             Expanded(
               child: TextField(
                 decoration: const InputDecoration(
                   hintText: "Search Notes",
                   border: InputBorder.none,
-                  hintStyle: TextStyle(color: Colors.white70),
                 ),
-                style: const TextStyle(color: Colors.white),
                 onChanged: _searchNotes,
               ),
             ),

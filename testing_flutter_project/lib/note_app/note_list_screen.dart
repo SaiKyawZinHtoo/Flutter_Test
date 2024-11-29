@@ -5,6 +5,8 @@ import 'package:testing_flutter_project/main.dart';
 import 'package:testing_flutter_project/note_app/note_edit_screen.dart';
 import 'package:testing_flutter_project/note_app/note_list_search.dart';
 import 'package:testing_flutter_project/note_app/pages/model/note.dart';
+import 'package:testing_flutter_project/note_app/provider/theme_provider.dart';
+import 'package:testing_flutter_project/note_app/service/note_service.dart';
 
 class NoteListScreen extends StatelessWidget {
   const NoteListScreen({super.key});
@@ -14,14 +16,21 @@ class NoteListScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: false,
-        title: const Text(
+        title: Text(
           "My Notes",
-          style: TextStyle(
-            fontWeight: FontWeight.bold,
-            fontSize: 24,
-          ),
+          style: Theme.of(context).textTheme.bodyLarge,
         ),
         actions: [
+          IconButton(
+            onPressed: () {
+              ThemeProvider.of(context)!.changeTheme();
+            },
+            icon: Icon(
+              Theme.of(context).brightness == Brightness.light
+                  ? Icons.light_mode
+                  : Icons.dark_mode, // Change icon based on theme
+            ),
+          ),
           IconButton(
             onPressed: () {
               Navigator.of(context).push(
@@ -30,7 +39,11 @@ class NoteListScreen extends StatelessWidget {
                 ),
               );
             },
-            icon: const Icon(Icons.search),
+            icon: Icon(
+              Icons.search,
+              color:
+                  Theme.of(context).iconTheme.color, // Use dynamic theme color
+            ),
             tooltip: "Search Notes",
           ),
         ],

@@ -8,6 +8,9 @@ import 'package:testing_flutter_project/navigation/screen_c.dart';
 import 'package:testing_flutter_project/note_app/note_list_screen.dart';
 import 'package:testing_flutter_project/note_app/pages/model/note.dart';
 import 'package:testing_flutter_project/note_app/pages/splash_screen.dart';
+import 'package:testing_flutter_project/note_app/provider/theme_provider.dart';
+import 'package:testing_flutter_project/note_app/service/note_service.dart';
+import 'package:testing_flutter_project/note_app/theme/note_theme.dart';
 import 'package:testing_flutter_project/widgets/appBar.dart';
 import 'package:testing_flutter_project/widgets/bodyContainer.dart';
 import 'package:testing_flutter_project/widgets/bottomSheet.dart';
@@ -62,16 +65,51 @@ void main() {
 
 final List<Note> allNote = [];
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({super.key});
 
   @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  ThemeMode _themeMode = ThemeMode.dark;
+
+  @override
+  void initState() {
+    super.initState();
+    loadTheme();
+  }
+
+  void loadTheme() async {
+    final themeMode = await ThemeService.getThemeMode();
+    setState(() {
+      _themeMode = themeMode;
+    });
+  }
+
+  @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: "Note App",
-      home: const NoteSplashScreen(),
-      theme: ThemeData.dark(),
+    return ThemeProvider(
+      themeMode: _themeMode,
+      changeTheme: () async {
+        setState(() {
+          if (_themeMode == ThemeMode.light) {
+            _themeMode = ThemeMode.dark;
+          } else {
+            _themeMode = ThemeMode.light;
+          }
+        });
+        await ThemeService.setThemeMode(_themeMode);
+      },
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: "Note App",
+        home: const NoteSplashScreen(),
+        theme: NoteTheme.lightTheme(),
+        darkTheme: NoteTheme.darkTheme(),
+        themeMode: _themeMode,
+      ),
     );
   }
 }
