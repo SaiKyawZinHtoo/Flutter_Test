@@ -9,4 +9,9 @@ class Contact {
   String age;
 
   Contact(this.id, this.name, this.job, this.age);
+
+  factory Contact.fromJson(Map<String, dynamic> json) =>
+      _$ContactFromJson(json);
+
+  Map<String, dynamic> toJson() => _$ContactToJson(this);
 }
