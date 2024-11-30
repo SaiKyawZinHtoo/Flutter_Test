@@ -17,16 +17,20 @@ samples, guidance on mobile development, and a full API reference.
 
 # yamal file ထဲမှာထည့်ထားတဲ့အကြောင်းကို နားလည်သလိုမျိုးကို ထည့်ရေးထားတာ
 
-Retrofit ထည့်ရတဲ့အတွက်ကတော့ api ယူဖို့အတွက်ပေါ့
+- Retrofit ထည့်ရတဲ့အတွက်ကတော့ api ယူဖို့အတွက်ပေါ့
 
-Logger ကျတော့ terminal ထဲမှာကိုကြည့်ဖို့အတွက်
+- Logger ကျတော့ terminal ထဲမှာကိုကြည့်ဖို့အတွက်
 
-flutter_bloc အတွက်ကြတော့ 
-မင်းသိထားတဲ့အတိုင်းကိုပေါ့
-Equatable အတွက်ကြတော့ object နှစ်ခုကို value နှစ်ခုနဲ့တူအောင်လို့ကိုလုပ်ပေးထားတာ
-flutter_slideable ကြတော့ ui မှာကို ဘယ်ညာဆွဲရင် သုံးဖို့အတွက်ကိုလုပ်ထားတာ
-get_it = service locator အတွက်ကိုပေါ့ အဲ့တာသုံးထားတာကြတော့ 
+- flutter_bloc အတွက်ကြတော့ မင်းသိထားတဲ့အတိုင်းကိုပေါ့
 
-Retrofit_generator 
-json_serializable
-build_runner
+- Equatable အတွက်ကြတော့ object နှစ်ခုကို value နှစ်ခုနဲ့တူအောင်လို့ကိုလုပ်ပေးထားတာ
+
+- flutter_slideable ကြတော့ ui မှာကို ဘယ်ညာဆွဲရင် သုံးဖို့အတွက်ကိုလုပ်ထားတာ
+
+- get_it = service locator အတွက်ကိုပေါ့ အဲ့တာသုံးထားတာကြတော့ 
+
+- Retrofit_generator 
+
+- json_serializable
+
+- build_runner
